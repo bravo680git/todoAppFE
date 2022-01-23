@@ -7,6 +7,7 @@ function FormTodo({taskState, setCalling, create}) {
     const [task, setTask] = taskState
 
     const handleCreate = async () => {
+        if (date ==='') return
         const todo = {
             name,
             deadline: date,
