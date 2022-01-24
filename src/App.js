@@ -8,7 +8,7 @@ function App() {
   const [task, setTask] = useState('create')
 
   useEffect(() => {
-    fetch('http://localhost:3100/getAllTodos')
+    fetch('https://todo-app-bravo680.herokuapp.com/getAllTodos')
     .then(res => res.json())
     .then(data => setTodos(data))
     .catch(err => console.log("error:", err))

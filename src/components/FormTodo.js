@@ -13,7 +13,7 @@ function FormTodo({taskState, setCalling, create}) {
             deadline: date,
             isDone:false
         }
-        const res = await fetch('http://localhost:3100/addTodo', {
+        const res = await fetch('https://todo-app-bravo680.herokuapp.com/addTodo', {
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(todo)
@@ -26,7 +26,7 @@ function FormTodo({taskState, setCalling, create}) {
     }
 
     const handleUpdate = async (id) => {
-        const res = await fetch(`http://localhost:3100/updateTodo/${id}`, {
+        const res = await fetch(`https://todo-app-bravo680.herokuapp.com/updateTodo/${id}`, {
             method:'PUT',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({

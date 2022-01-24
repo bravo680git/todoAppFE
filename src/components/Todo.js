@@ -6,7 +6,7 @@ function Todo({todo, setCalling, taskState}) {
     const [task, setTask] = taskState
 
     const handleCheck = async (id) => {
-        const res = await fetch(`http://localhost:3100/updateTodo/${id}`, {
+        const res = await fetch(`https://todo-app-bravo680.herokuapp.com/updateTodo/${id}`, {
             method:'PUT',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -21,7 +21,7 @@ function Todo({todo, setCalling, taskState}) {
     }
 
     const handleDelete = async (id) => {
-        const res = await fetch(`http://localhost:3100/deleteTodo/${id}`, {
+        const res = await fetch(`https://todo-app-bravo680.herokuapp.com/${id}`, {
             method:'DELETE'
         })
         if (res.ok) {
