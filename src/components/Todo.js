@@ -21,7 +21,7 @@ function Todo({todo, setCalling, taskState}) {
     }
 
     const handleDelete = async (id) => {
-        const res = await fetch(`https://todo-app-bravo680.herokuapp.com/${id}`, {
+        const res = await fetch(`https://todo-app-bravo680.herokuapp.com/deleteTodo/${id}`, {
             method:'DELETE'
         })
         if (res.ok) {
